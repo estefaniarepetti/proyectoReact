@@ -8,7 +8,7 @@ return(
 
     <footer>
     <div>
-    <h4> Pie de pagina {this.props.greeting} {this.props.greeting}  </h4>
+    <h4> {this.props.greeting} {this.props.greeting2}  </h4>
     </div>
     <BottomNav />
     </footer>
