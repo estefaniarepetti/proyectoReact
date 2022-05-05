@@ -1,27 +1,35 @@
-
-export default function Navbar(){
-    const navStyle ={
-        display: "flex",
-        flexWrap: "wrap",
-        justifyContent: "space-between",
-        listStyle: "none",
-        color: "#1d95e6",
-        
-    }
+import CartIcon from "../CartIcon/CartIcon";
+import {Navbar, Container, Nav, NavDropdown} from "react-bootstrap"
+import BottomNav from "../BottomNav/BottomNav"; 
+export default function Header(){
+   
+const Buttom = ({texto}) => {
+    console.log(texto)
     return(
-        <header>
-            <nav className="nav">
-                <div className="logo">Mi Logo </div>
-             <ul className="navListado" style={navStyle} >
-             <li>  Home</li>
-                <li> Shop </li>
-                <li> Accesorios</li>
-                <li> Contactanos</li>
-             </ul>
-            </nav>
-
-        </header>
-
-
+    <input type="button" value={texto} />
+    )
+}
+    return(
+        <>
+        <Navbar bg="light" expand="lg">
+        <Container>
+          <Navbar.Brand href="#home">Mi Ecommerce</Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="me-auto">
+              <Nav.Link href="#home">Inicio</Nav.Link>
+              <NavDropdown title="Tienda" id="basic-nav-dropdown">
+                <NavDropdown.Item href="#action/3.1">Accesorios</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.2">Ropa</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.3">Zapatos</NavDropdown.Item>
+              </NavDropdown>
+              <Nav.Link href="#link">Contactanos</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+       <CartIcon count={8} />
+      </Navbar>
+    
+       </>
     );
 }
