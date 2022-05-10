@@ -1,6 +1,5 @@
 import Header from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
-import CartIcon from "./components/CartIcon/CartIcon"
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 import {Container, Row, Col} from "react-bootstrap"
 

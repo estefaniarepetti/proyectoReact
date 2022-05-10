@@ -1,14 +1,11 @@
-import CartIcon from "../CartIcon/CartIcon";
+
+import React from "react"
+import AddButton from "../AddButton/AddButton";
 import {Navbar, Container, Nav, NavDropdown} from "react-bootstrap"
-import BottomNav from "../BottomNav/BottomNav"; 
+
+
 export default function Header(){
-   
-const Buttom = ({texto}) => {
-    console.log(texto)
-    return(
-    <input type="button" value={texto} />
-    )
-}
+
     return(
         <>
         <Navbar bg="light" expand="lg">
@@ -27,9 +24,10 @@ const Buttom = ({texto}) => {
             </Nav>
           </Navbar.Collapse>
         </Container>
-       <CartIcon count={8} />
       </Navbar>
-    
-       </>
+     
+     <AddButton />
+           </>
+ 
     );
 }

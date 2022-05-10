@@ -1,0 +1,52 @@
+/* Boton Carrito */
+
+
+.boton{
+  text-align:center;
+  text-decoration: none;
+font-family: 'Helvetica Neue', Helvetica, sans-serif;
+display:inline-block;
+  color: #FFF;
+  background: #7F8C8D;
+  padding: 10px 30px;
+  white-space: nowrap;
+  margin: 10px 5px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.azul{
+background: #3498DB;
+}
+
+.azul:hover{
+background: #2980B9;
+}
+
+.boton1{
+  text-align:center;
+  text-decoration: none;
+font-family: 'Helvetica Neue', Helvetica, sans-serif;
+display:inline-block;
+  color: #FFF;
+  background: #7F8C8D;
+  padding: 2px 5px;
+  white-space: nowrap;
+  margin: 10px 5px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.verde{
+  background: #2ECC71;
+}
+
+.verde:hover{
+  background: #27AE60;
+}
