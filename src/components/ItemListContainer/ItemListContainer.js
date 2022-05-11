@@ -1,17 +1,29 @@
-import React from "react"
+import React, { useEffect, useState }  from 'react'
+import ItemList from '../ItemList/ItemList'
+import { traerProd } from '../Productos/Productos'
 
-export default class Footer extends React.Component{
-    render(){
-        console.log(this.props)
+const ItemListContainer = ({saludo}) => {
+  
+  const [listaProductos, setListaProductos]=useState([])
+  const [cargando, setCargando] = useState(false)
+ 
 
-return(
+  useEffect(()=>{
+    setCargando(true)
+    traerProd
+    .then((res)=> setListaProductos(res))
+    .catch((error)=> console.log(error))
+    .finally(()=> setCargando(false))
+   // eslint-disable-next-line
+  }, [])
 
-<div>
 
-    <h3 className="ItemList"> {this.props.greeting}     a a estar aca </h3>
+  return (
+    <div>
+        <h1>{saludo}</h1>
+        {cargando ? <p>Cargando...</p> : <ItemList listaProductos={listaProductos}/>}
     </div>
-
-
-)
-    }
+  )
 }
+
+export default ItemListContainer
