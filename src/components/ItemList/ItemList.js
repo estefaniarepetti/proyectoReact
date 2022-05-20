@@ -6,7 +6,7 @@ const ItemList = ({listaProductos}) => {
   return (
       <>
         <h3>Lista de productos</h3>
-    <div style={{display:'flex', justifyContent:'space-between', flexWrap:'wrap', alignItems:'center' }}>
+    <div className='principal' >
         {listaProductos.map((producto) => <Item producto={producto} key={producto.id}/> )}
     </div>
       </>

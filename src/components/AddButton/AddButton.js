@@ -15,13 +15,18 @@ const stock = 8
       setCount(count -1)
     }
   }
+  const onSubmit = () => {
+    alert ("Se agrego al carrito")
+  }
   const StockButton = ({handleOnClick, text}) => {
-    return <button ClassName=" stock-button" onClick={handleOnClick }> {text} </button>;
+    return <button className=" stock-button" onClick={handleOnClick }> {text} </button>;
   };
 
-const AddButton = () => {
-  return   <button ClassName=" add-button" > Añadir al Carrito </button>;
+const AddButton = ({handleOnSubmit}) => {
+  return   <button className=" add-button" onClick={handleOnSubmit }> Añadir al Carrito </button>;
 };
+
+
 
 return(
   <> 
@@ -34,7 +39,8 @@ return(
 
 
   </div>
-   <AddButton/> 
+   <AddButton handleOnSubmit={onSubmit} /> 
+   
    </>
 )
 }
