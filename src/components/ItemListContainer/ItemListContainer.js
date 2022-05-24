@@ -1,33 +1,33 @@
-import React, { useEffect, useState }  from 'react'
-import ItemList from '../ItemList/ItemList'
-import { traerProd } from '../Productos/Productos'
+import React from "react";
+import ItemList from '../ItemList/ItemList' 
+import { producto } from '../Productos/Productos'
+import {Container, Row, Col} from "react-bootstrap"
 
-const ItemListContainer = ({saludo}) => {
-  
-  const [listaProductos, setListaProductos]=useState([])
-  const [cargando, setCargando] = useState(false)
+export default function ItemListContainer ({categoryId}){
+const [items, setItems]= React.useState ([]);
+  React.useEffect(()=> {
+    if(categoryId){
+    setItems(producto.filter(item => item.category_id === +categoryId));
+  }else{
+    setItems(producto);
+  }
  
+}, [categoryId])
 
-  useEffect(()=>{
-    setCargando(true)
-    traerProd
-    .then((res)=> setListaProductos(res))
-    .catch((error)=> console.log(error))
-    .finally(()=> setCargando(false))
+ return (
+   <Container className="itemlist-container"> 
+   <Row>
+  <Col>
+  <h1> hola </h1>
+  </Col>
+   </Row>
+   <Row>
+     <ItemList items={items}/>
+   </Row>
    
-  }, [])
-
-
-  return (
-    <div>
-        <h1>{saludo}</h1>
-        {cargando ? <p>Cargando...</p> : 
-        
-        <ItemList listaProductos={listaProductos}/>}
-
-
-    </div>
-  )
+   </Container>
+    
+   
+  );
 }
 
-export default ItemListContainer

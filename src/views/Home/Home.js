@@ -7,8 +7,9 @@ export default function Home (){
   return (
  <> 
     <div>
+     
       <Navbar />
-      <h1> </h1>
+     <h1> productos Home</h1>
       <ItemListContainer tittle="Nuestros Productos" />
       <Footer />
     </div>

@@ -1,23 +1,22 @@
-
-import AddButton from "../AddButton/AddButton";
-import {Container, Row , Col, Card} from "react-bootstrap"
-import React from "react"
-
-export default function ItemDetailContainer ({item}){
-
-
-    return (
-   <Card>
-     <Card.Img variant="top" src={item.image} />
-     <Card.Body>
-      <Card.Title> {item.title} </Card.Title>
-      <Card.Text>
-        Some quick example text to buil on the card tittle and make up..
-      </Card.Text>
-      <h3>$ {item.price}</h3>
-      <AddButton /> 
-     </Card.Body>
-   </Card>
-
+import {Container, Row, Col} from "react-bootstrap"
+import React from "react";
+import { producto } from "../Productos/Productos";
+import ItemDetail from "../ItemDetail/ItemDetail"
+export default function ItemDetailContainer ({ title, productoId }) {
+  const [item, setItem] = React.useState({});
+  React.useEffect(() => {
+    setItem(producto.find(item => item.id === productoId));
+  }, [productoId]);
+  return (
+    <Container className="itemlist-container">
+      <Row>
+        <Col>
+          <h1>Hola </h1>
+        </Col>
+      </Row>
+      <Row>
+        <ItemDetail item={item} />
+      </Row>
+    </Container>
   );
-  }
+}

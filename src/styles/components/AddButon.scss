@@ -1,14 +1,14 @@
 /* Boton Carrito */
 
 
-.boton{
+.botonAzul{
   text-align:center;
   text-decoration: none;
-font-family: 'Helvetica Neue', Helvetica, sans-serif;
-display:inline-block;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  display:inline-block;
   color: #FFF;
-  background: #7F8C8D;
-  padding: 10px 30px;
+  background: #b2e5e9;
+ /* padding: 10px 30px;*/
   white-space: nowrap;
   margin: 10px 5px;
   -webkit-transition: all 0.2s ease-in-out;
@@ -18,15 +18,15 @@ display:inline-block;
   transition: all 0.2s ease-in-out;
 }
 
-.azul{
+.botonAzul{
 background: #3498DB;
 }
-
-.azul:hover{
+  
+.botonAzul:hover{
 background: #2980B9;
 }
 
-.boton1{
+.botonPrincipal{
   text-align:center;
   text-decoration: none;
 font-family: 'Helvetica Neue', Helvetica, sans-serif;
@@ -43,10 +43,10 @@ display:inline-block;
   transition: all 0.2s ease-in-out;
 }
 
-.verde{
+.botonPrincipal{
   background: #2ECC71;
 }
 
-.verde:hover{
+.botonPrincipal:hover{
   background: #27AE60;
 }

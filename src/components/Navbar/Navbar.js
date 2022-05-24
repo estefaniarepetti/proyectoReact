@@ -1,7 +1,7 @@
 
 import React from "react";
 import CartIcon from "../CartIcon/CartIcon";
-import {Navbar, Container, Nav, NavDropdown} from "react-bootstrap";
+import {Navbar, Container, Nav} from "react-bootstrap";
 import {Link} from "react-router-dom"
 
 export default function Header(){
@@ -14,19 +14,17 @@ export default function Header(){
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link> <Link To="/"> Home </Link> </Nav.Link>
-              <Nav.Link> <Link To="product"> Prinicipales</Link> </Nav.Link>
-              <Nav.Link> <Link To="products"> Disney</Link>  </Nav.Link>
-              <Nav.Link> <Link To="products"> Movies</Link>  </Nav.Link>
-
-              <Nav.Link> Contact </Nav.Link>
+              <Nav.Link> <Link to="/">  Home </Link> </Nav.Link>
+              <Nav.Link> <Link to="/products"> Prinicipales </Link> </Nav.Link>
+              <Nav.Link> <Link  to="/category/1">  Disney </Link> </Nav.Link>
+              <Nav.Link> <Link to="/category/2">  Series </Link> </Nav.Link>
+             
+              <Nav.Link>  </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
         <CartIcon />
       </Navbar>
-      
-   
            </>
  
     );

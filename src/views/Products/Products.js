@@ -1,14 +1,22 @@
 import ItemListContainer from "../../components/ItemListContainer/ItemListContainer";
-import React from "react-router-dom"
+import Navbar from "../../components/Navbar/Navbar"
+import Footer from "../../components/Footer/Footer";
+import React from "react"
+
+
+
 export default function Products () {
 
-
 return (
+  <> 
   <div>
-    <h1> Productos</h1>
+    <Navbar /> 
+    <h1>  know our products
+   </h1>
     <ItemListContainer />
   </div>
 
-
+<Footer />
+</>
 )
 } 
