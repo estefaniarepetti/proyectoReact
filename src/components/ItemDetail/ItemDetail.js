@@ -1,6 +1,11 @@
 import { Card } from "react-bootstrap"
 import AddButton from "../AddButton/AddButton";
+import { useContext } from "react";
+
 export default function ItemDetail ({item}) {
+
+
+
   return (
     <Card>
       <Card.Img variant="top" src={item.image} />

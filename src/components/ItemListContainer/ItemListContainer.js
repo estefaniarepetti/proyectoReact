@@ -1,24 +1,28 @@
-import React from "react";
+import React, {useEffect, useState, setItems} from "react";
 import ItemList from '../ItemList/ItemList' 
 import { producto } from '../Productos/Productos'
 import {Container, Row, Col} from "react-bootstrap"
 
+
 export default function ItemListContainer ({categoryId}){
 const [items, setItems]= React.useState ([]);
   React.useEffect(()=> {
+      
     if(categoryId){
     setItems(producto.filter(item => item.category_id === +categoryId));
-  }else{
+  }
+  else{
     setItems(producto);
   }
  
 }, [categoryId])
 
  return (
+   <>
    <Container className="itemlist-container"> 
    <Row>
   <Col>
-  <h1> hola </h1>
+  
   </Col>
    </Row>
    <Row>
@@ -26,8 +30,9 @@ const [items, setItems]= React.useState ([]);
    </Row>
    
    </Container>
-    
+    </>
    
   );
 }
+
 

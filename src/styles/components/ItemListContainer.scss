@@ -4,3 +4,34 @@
   color: #D358F7;
   
 }
+
+
+
+.text-card{
+  text-decoration: none;
+
+}
+
+.card-text {
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #aa4fb2;
+  font-family: 'Museo 700';
+  text-align: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  line-height: 25px;
+  float: left;
+}
+
+.card-price {
+  line-height: 25px;
+  font-size: 16px;
+  margin: 0;
+  color: black;
+  font-family: 'Gotham-Medium';
+  text-align: left;
+  margin: 0px 0px 0px 13px;
+  display: -webkit-box;
+}
