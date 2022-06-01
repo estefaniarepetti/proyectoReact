@@ -5,7 +5,7 @@ export const producto = [
     name: "Funko Marvel",
     stock: 12,
     description: "ARS 6700",
-    img: "images/product/funco1.png",
+    img: "../images/product/funco1.png",
     category_id: "Serie"
   },
   {
@@ -13,7 +13,7 @@ export const producto = [
     name: "Funko Thanos",
     stock: 4,
     description: "ARS 6304",
-    img: "images/product/funco2.png",
+    img: "../images/product/funco2.png",
     category_id: "Serie"
 
   },
@@ -22,7 +22,7 @@ export const producto = [
     name: "Funko Bart Simpsons",  
     stock: 15,
     description: "ARS 7100",
-    img:"images/product/funco3.png",
+    img:"../images/product/funco3.png",
     category_id: "Disney"
 
   },
@@ -31,7 +31,7 @@ export const producto = [
     name: "Funko Spider Man ",
     stock: 9,
     description: "ARS 5999",
-    img: "images/product/funco4.png",
+    img: "../images/product/funco4.png",
     category_id: "Serie"
 
   },
@@ -40,7 +40,7 @@ export const producto = [
     name: "Funko Marvel",
     stock: 6,
     description: "ARS 7700",
-    img: "images/product/funco2.png",
+    img: "../images/product/funco2.png",
     category_id:"Serie"
   },
   {
@@ -48,7 +48,7 @@ export const producto = [
     name: "Funko Simpsons",
     stock: 3,
     description: "ARS 6800",
-    img: "images/product/funco3.png",
+    img: "../images/product/funco3.png",
     category_id: "Disney"
 
   },
@@ -57,7 +57,7 @@ export const producto = [
     name: "Funko Spider Man ",
     stock: 9,
     description: "ARS 5999",
-    img: "images/product/funco4.png",
+    img: "../images/product/funco4.png",
     category_id:"Serie"
 },
 {
@@ -65,7 +65,7 @@ export const producto = [
     name: "Funko Spider Man ",
     stock: 9,
     description: "ARS 5999",
-    img: "images/product/funco4.png",
+    img: "../images/product/funco4.png",
     category_id: "Serie"
 },
 {
@@ -73,7 +73,7 @@ export const producto = [
   name: "Funko Bart Simpsons",  
   stock: 10,
   description: "ARS 7100",
-  img:"images/product/funco3.png",
+  img:"../images/product/funco3.png",
   category_id: "Disney"
 
 },

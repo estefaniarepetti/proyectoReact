@@ -4,7 +4,7 @@ import { producto } from "../Productos/Productos";
 import ItemDetail from "../ItemDetail/ItemDetail"
 
 export default function ItemDetailContainer ({ title, productoId }) {
-    
+
   const [item, setItem] = React.useState({});
 
   React.useEffect(() => {
@@ -16,7 +16,7 @@ export default function ItemDetailContainer ({ title, productoId }) {
     <Container className="itemlist-container">
       <Row>
         <Col>
-          <h1>Hola </h1>
+          <h1> </h1>
         </Col>
       </Row>
       <Row>

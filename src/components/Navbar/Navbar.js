@@ -11,17 +11,17 @@ export default function Header(){
         <>
         <Navbar bg="light" expand="lg">
         <Container>
-          <Navbar.Brand> Funko's World</Navbar.Brand>
         <LogoNavBar /> 
+        
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link> <Link to="/">  Home </Link> </Nav.Link>
-              <Nav.Link> <Link to="/products"> Prinicipales </Link> </Nav.Link>
-              <Nav.Link> <Link  to="/category/Disney">  Disney </Link> </Nav.Link>
-              <Nav.Link> <Link to="/category/Series">  Series </Link> </Nav.Link>
+              <Nav.Link > <Link to="/" className="nav-text">  Home </Link> </Nav.Link>
+              <Nav.Link > <Link to="/products" className="nav-text"> Prinicipales </Link> </Nav.Link>
+              <Nav.Link > <Link  to="/category/Disney" className="nav-text">  Disney </Link> </Nav.Link>
+              <Nav.Link > <Link to="/category/Series" className="nav-text">  Series </Link> </Nav.Link>
              
-          
+
             </Nav>
           </Navbar.Collapse>
         </Container>
