@@ -6,7 +6,7 @@ export const producto = [
     stock: 12,
     description: "ARS 6700",
     img: "../images/product/funco1.png",
-    category_id: "Serie"
+    category_id: "Disney"
   },
   {
     id: 2,
@@ -14,7 +14,7 @@ export const producto = [
     stock: 4,
     description: "ARS 6304",
     img: "../images/product/funco2.png",
-    category_id: "Serie"
+    category_id: "Disney"
 
   },
   {
@@ -23,7 +23,7 @@ export const producto = [
     stock: 15,
     description: "ARS 7100",
     img:"../images/product/funco3.png",
-    category_id: "Disney"
+    category_id: "Series"
 
   },
   {
@@ -32,7 +32,7 @@ export const producto = [
     stock: 9,
     description: "ARS 5999",
     img: "../images/product/funco4.png",
-    category_id: "Serie"
+    category_id: "Series"
 
   },
   {
@@ -41,7 +41,7 @@ export const producto = [
     stock: 6,
     description: "ARS 7700",
     img: "../images/product/funco2.png",
-    category_id:"Serie"
+    category_id:"Series"
   },
   {
     id: 6,
@@ -58,7 +58,7 @@ export const producto = [
     stock: 9,
     description: "ARS 5999",
     img: "../images/product/funco4.png",
-    category_id:"Serie"
+    category_id:"Series"
 },
 {
     id: 8,
@@ -66,15 +66,15 @@ export const producto = [
     stock: 9,
     description: "ARS 5999",
     img: "../images/product/funco4.png",
-    category_id: "Serie"
+    category_id: "Disney"
 },
 {
   id: 9,
-  name: "Funko Bart Simpsons",  
+  name: "Funko Bart Simpsons",    
   stock: 10,
   description: "ARS 7100",
   img:"../images/product/funco3.png",
-  category_id: "Disney"
+  category_id: "Series"
 
 },
 ]

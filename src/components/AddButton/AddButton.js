@@ -1,7 +1,7 @@
 import React from "react"
+import {button } from "react-bootstrap"
 
-
-export default function AddButton(){
+export default function AddButton({onSubmit}){
   const [count, setCount] = React.useState(1)
 const stock = 8
 
@@ -15,9 +15,7 @@ const stock = 8
       setCount(count -1)
     }
   }
-  const onSubmit = () => {
-    alert ("Se agrego al carrito")
-  }
+
   const StockButton = ({handleOnClick, text}) => {
     return <button className=" stock-button botonAzul" onClick={handleOnClick }> {text} </button>;
   };

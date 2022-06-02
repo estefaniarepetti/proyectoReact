@@ -5,3 +5,15 @@
   font-family: 'Gotham-Medium';
   font-size: 22px;
 }
+
+.badge{
+  width: 20px;
+  height: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  background-color: #d06aff;
+  border-radius: 10px;
+}

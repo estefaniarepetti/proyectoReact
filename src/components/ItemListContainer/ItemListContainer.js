@@ -9,7 +9,7 @@ const [items, setItems]= React.useState ([]);
   React.useEffect(()=> {
       
     if(categoryId){
-    setItems(producto.filter(item => item.category_id === +categoryId));
+    setItems(producto.filter(item => item.category_id ===categoryId));
   }
   else{
     setItems(producto);
