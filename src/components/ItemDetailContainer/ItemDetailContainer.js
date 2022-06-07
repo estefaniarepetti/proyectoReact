@@ -12,7 +12,7 @@ export default function ItemDetailContainer ({ title, productoId }) {
     setItem(producto.find(item => item.id === productoId));
   }, [productoId]);
 
-  return (
+  return (    
     <Container className="itemlist-container">
       <Row>
         <Col>

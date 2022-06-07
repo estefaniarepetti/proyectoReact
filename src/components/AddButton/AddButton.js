@@ -1,10 +1,8 @@
-import React from "react"
+import React from "react" 
 import {button } from "react-bootstrap"
 
-export default function AddButton({onSubmit}){
-  const [count, setCount] = React.useState(1)
-const stock = 8
-
+export default function AddButton({count, setCount, stock, onSubmit}){
+ 
   const onAdd = () => {
     if(count <stock){
     setCount (count + 1)

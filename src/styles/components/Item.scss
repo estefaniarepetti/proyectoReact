@@ -1,0 +1,43 @@
+.ButtonPrincipal{
+  --color1: #111;
+  --color2: #f3f3f7;
+  width: auto;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;  
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  font-size: 1rem;
+  font-family: "Open Sans Condensed",sans-serif;
+  font-weight: 700;
+  background: var(--color1);
+  color: var(--color2);
+  border: 0;
+  line-height: 1;
+  padding: .75rem 1.25em;
+  border-radius: 2em;
+  transition: all .1s ease-in-out;
+  position: relative;
+  margin: .33rem 0;
+}
+
+a.text-card{
+  text-decoration: none;
+  list-style: none; 
+color: #f3f3f7 !important;
+}
+
+a{
+  color: #f3f3f7;
+}
+
+.carousel-caption{
+  color: #111 !important;
+  text-transform: uppercase;
+  font-family: TTNorms-Black!important;
+}
+

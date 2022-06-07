@@ -21,12 +21,8 @@ const CartProvider = ({children}) => {
     }
   }
 
-  // removeFromCart
   const removeFromCart = (id) => {
-    //Replicar logica de addToCart pero invertida 
-    //y chequear la funcion a realizar cuando el quantity es 1
-    
-    //SI LA CANTIDAD ES IGUAL A 1 HACE ESTO
+ 
     const newCart = cart.filter((carItem) => carItem.id !== id);
     setCart(newCart)
 
@@ -41,11 +37,11 @@ const CartProvider = ({children}) => {
      setCart(newCart); */
     
   }
-  // deleteAll
+  
   const deleteAll = () => {
-    setCart([]) 
+    setCart([])     
   }
-  // isInCart
+  
   const isInCart = (id) => {
     return cart.find(item => item.id === id)
   }

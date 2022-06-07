@@ -18,8 +18,8 @@ export default function Header(){
             <Nav className="me-auto">
               <Nav.Link > <Link to="/" className="nav-text">  Home </Link> </Nav.Link>
               <Nav.Link > <Link to="/products" className="nav-text"> Prinicipales </Link> </Nav.Link>
-              <Nav.Link > <Link  to="/category/Disney" className="nav-text">  Disney </Link> </Nav.Link>
-              <Nav.Link > <Link to="/category/Series" className="nav-text">  Series </Link> </Nav.Link>
+              <Nav.Link > <Link  to="/category/Disney" className="nav-text">  Movies </Link> </Nav.Link>
+              <Nav.Link > <Link to="/category/Series" className="nav-text"> Sale </Link> </Nav.Link>
              
 
             </Nav>

@@ -11,16 +11,22 @@ const navigate = useNavigate()
   
     <div className="card" style={{width:'18rem', margin:'.5rem'}}>
     <img src={item.img} className="card-img-top" alt={item.name}/>
-    <Link to ={`/product/${item.id}`} className="text-card">  
+    
     <div className="card-body">
         <p className="card-text">{item.name}</p>
         </div>
         <div className="card-body">
         <p className="card-price">Total: {item.description}</p>
     </div>
-    </Link> 
 
-    <AddButton />
+    <button class="ButtonPrincipal">
+     
+      <Link to ={`/product/${item.id}`} className="text-card">  
+     Ver más
+      </Link> 
+
+    </button>
+  
 </div>
 </>
 

@@ -37,43 +37,43 @@ export const producto = [
   },
   {
     id: 5,
-    name: "Funko Marvel",
+    name: "Funko Movies & tv",
     stock: 6,
     description: "ARS 7700",
-    img: "../images/product/funco2.png",
+    img: "../images/product/funcoserie1.png",
     category_id:"Series"
   },
   {
     id: 6,
-    name: "Funko Simpsons",
+    name: "Funko Marvel",
     stock: 3,
     description: "ARS 6800",
-    img: "../images/product/funco3.png",
+    img: "../images/product/funcoserie2.png",
     category_id: "Disney"
 
   },
 {
   id: 7,
-    name: "Funko Spider Man ",
+    name: "Funko Star Wars ",
     stock: 9,
     description: "ARS 5999",
-    img: "../images/product/funco4.png",
+    img: "../images/product/funcoserie3.png",
     category_id:"Series"
 },
 {
     id: 8,
-    name: "Funko Spider Man ",
+    name: "Funko Loki ",
     stock: 9,
     description: "ARS 5999",
-    img: "../images/product/funco4.png",
+    img: "../images/product/funcoserie4.png",
     category_id: "Disney"
 },
 {
   id: 9,
-  name: "Funko Bart Simpsons",    
+  name: "Funko Hugo Bart",    
   stock: 10,
   description: "ARS 7100",
-  img:"../images/product/funco3.png",
+  img:"../images/product/funco5.png",
   category_id: "Series"
 
 },
