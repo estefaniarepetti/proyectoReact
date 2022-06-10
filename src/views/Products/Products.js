@@ -11,8 +11,7 @@ return (
   <> 
   <div>
     <Navbar /> 
-    <h1>  know our products
-   </h1>
+    <h1 className="">  know our products  </h1>
     <ItemListContainer />
   </div>
 

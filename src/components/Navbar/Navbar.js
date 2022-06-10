@@ -9,7 +9,7 @@ export default function Header(){
 
     return(
         <>
-        <Navbar bg="light" expand="lg">
+        <Navbar bg="" expand="lg">
         <Container>
         <LogoNavBar /> 
         
@@ -17,16 +17,15 @@ export default function Header(){
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               <Nav.Link > <Link to="/" className="nav-text">  Home </Link> </Nav.Link>
-              <Nav.Link > <Link to="/products" className="nav-text"> Prinicipales </Link> </Nav.Link>
-              <Nav.Link > <Link  to="/category/Disney" className="nav-text">  Movies </Link> </Nav.Link>
-              <Nav.Link > <Link to="/category/Series" className="nav-text"> Sale </Link> </Nav.Link>
+              <Nav.Link > <Link  to="/category/Movies" className="nav-text"> Movies </Link> </Nav.Link>
+              <Nav.Link > <Link to="/category/Sale" className="nav-text"> Sale </Link> </Nav.Link>
              
 
             </Nav>
           </Navbar.Collapse>
         </Container>
   
-        <Nav.Link> <Link to="cart"> 
+        <Nav.Link> <Link to="/Cart"> 
               <CartIcon /> </Link> </Nav.Link>
 
       </Navbar>

@@ -3,7 +3,6 @@ import ItemList from '../ItemList/ItemList'
 import { producto } from '../Productos/Productos'
 import {Container, Row, Col} from "react-bootstrap"
 
-
 export default function ItemListContainer ({categoryId}){
 const [items, setItems]= React.useState ([]);
   React.useEffect(()=> {
@@ -19,19 +18,23 @@ const [items, setItems]= React.useState ([]);
 
  return (
    <>
-   <Container className="itemlist-container"> 
-   <Row>
-  <Col>
-  
-  </Col>
-   </Row>
-   <Row>
-     <ItemList items={items}/>
-   </Row>
-   
-   </Container>
-    </>
-   
+   <section class="store">
+    <h2 class="store__texto"> Product's  </h2>
+    <div class="container1">
+      <div class="items">
+        <div class="row2">
+       
+
+
+   <ItemList items={items}/>
+   </div>
+ </div>
+ </div>
+ 
+ </section>
+ 
+  </>
+    
   );
 }
 

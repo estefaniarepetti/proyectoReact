@@ -1,4 +1,5 @@
 import React from "react"
+import { act } from "react-dom/test-utils";
 
 const CartContext = React.createContext();
 const {Provider} = CartContext
@@ -26,18 +27,8 @@ const CartProvider = ({children}) => {
     const newCart = cart.filter((carItem) => carItem.id !== id);
     setCart(newCart)
 
-    // SINO
-
-   /*  const newCart = cart.map((cartItem) => {
-       if (cartItem.id === item.id) {
-         cartItem.quantity--;
-       }
-       return cartItem;
-     });
-     setCart(newCart); */
-    
   }
-  
+
   const deleteAll = () => {
     setCart([])     
   }
@@ -45,6 +36,22 @@ const CartProvider = ({children}) => {
   const isInCart = (id) => {
     return cart.find(item => item.id === id)
   }
+
+  const totalCount = () => {
+    return cart.reduce((total, item) => total + item.quantity, 0);
+  };
+
+  const totalPrice = () => {
+    return cart.reduce(
+      (total, item) => total + item.quantity * item.description,
+      0
+    );
+  };
+
+  const unitsPerProduct = (id) => {
+    const foundInCart = cart.find((item) => item.id === id);
+    return foundInCart ? foundInCart.quantity : 0;
+  };
 
 
   return (
@@ -54,7 +61,15 @@ const CartProvider = ({children}) => {
       deleteAll,
       isInCart,
       cart,
-    }}>{children}</Provider>
+      totalCount,
+      totalPrice,
+      unitsPerProduct,
+
+    }}
+    >
+    {children}
+
+    </Provider>
   )
 }
 

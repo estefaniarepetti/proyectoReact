@@ -3,31 +3,33 @@ import {Link, useNavigate} from "react-router-dom"
 import { producto } from '../Productos/Productos'
 import AddButton from '../AddButton/AddButton'  
 
+
 export default function Item ({item}){
 const navigate = useNavigate()
 
   return (
     <> 
   
-    <div className="card" style={{width:'18rem', margin:'.5rem'}}>
-    <img src={item.img} className="card-img-top" alt={item.name}/>
-    
-    <div className="card-body">
-        <p className="card-text">{item.name}</p>
-        </div>
-        <div className="card-body">
-        <p className="card-price">Total: {item.description}</p>
-    </div>
-
-    <button class="ButtonPrincipal">
-     
-      <Link to ={`/product/${item.id}`} className="text-card">  
-     Ver más
-      </Link> 
-
-    </button>
-  
+          <div class="col-12 col-md-6">
+            <div class="item shadow mb-4">
+             <img src={item.img} className="item-image" alt={item.name}/>
+             <div> 
+             <p className="item-title">{item.name}</p>
 </div>
+              <div class="item-details">
+
+              <p className="item-price">Total: {item.description}</p>
+           
+
+     <Link to ={`/product/${item.id}`} className="item-button btn btn-primary addToCart">  
+    Ver más detalle 
+     </Link> 
+
+              </div>
+            </div>
+          </div>
+
+
 </>
 
   );

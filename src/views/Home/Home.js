@@ -1,8 +1,9 @@
 import ItemListContainer from "../../components/ItemListContainer/ItemListContainer";
 import Footer from "../../components/Footer/Footer";  
 import Navbar from "../../components/Navbar/Navbar"
+import {Link, useNavigate} from "react-router-dom"
 import {Carousel} from "react-bootstrap"
-
+import Banner from "../../components/Banner/Banner";
 
 export default function Home (){
   return (
@@ -20,7 +21,8 @@ export default function Home (){
     />
     <Carousel.Caption>
       <h3>Movies & TV.</h3>
-      <p>Shop online </p>
+      <Link to="/products" className="nav-text"> 
+      Shop Online </Link>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
@@ -32,7 +34,8 @@ export default function Home (){
 
     <Carousel.Caption>
       <h3>Video Games </h3>
-      <p>Shop online .</p>
+      <Link to="/products" className="nav-text"> 
+      Shop Online </Link>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
@@ -44,18 +47,18 @@ export default function Home (){
 
     <Carousel.Caption>
       <h3>Anime </h3>
-      <p>Shop online.</p>
+       <Link to="/products" className="nav-text"> 
+      Shop Online </Link>
+  
     </Carousel.Caption>
   </Carousel.Item>
 </Carousel>
   </section>
 
-
-    <div>
-    
-     <h1> Conoce más  </h1>
       <ItemListContainer tittle="Nuestros Productos" />
-      </div>
+
+      
+      <Banner/>
       <Footer />
    
     </>
