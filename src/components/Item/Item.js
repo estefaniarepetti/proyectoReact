@@ -18,7 +18,7 @@ const navigate = useNavigate()
 </div>
               <div class="item-details">
 
-              <p className="item-price">Total: {item.description}</p>
+              <p className="item-price"> <b> Total: {item.description} </b></p>
            
 
      <Link to ={`/product/${item.id}`} className="item-button btn btn-primary addToCart">  

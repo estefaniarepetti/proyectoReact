@@ -10,10 +10,11 @@ const CarritoVacio = () => {
         <div>
         </div>
         <div className="items-center p-4 tracking-wider uppercase text-black-500 font-shadows">
-            <p className='text-2xl'>Ups!!! ¡Parece que tu carrito esta vacio!</p>
-          <Link to='/' className='flex flex-row items-center pt-4'>  Volver al Inicio para comprar...</Link>
+            <p className='text'>Ups!!! ¡Parece que tu carrito esta vacio!</p>
+            <iframe src="https://giphy.com/embed/znKRFrF8hc7LOCwdkh" width="200" height="200" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+          <Link to='/' className='volver'>  Volver al Inicio para comprar...</Link>
         </div>
-    </div>
+    </div>    
    <Footer />
    </>
   );

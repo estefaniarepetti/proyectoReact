@@ -8,10 +8,12 @@ const CartProvider = ({children}) => {
   const [cart, setCart] = React.useState([])
   // addToCart
   const addToCart = (item, count) => {
+
     if(isInCart(item.id)) {
       const newCart = cart.map(cartItem => {
         if(cartItem.id === item.id) {
           cartItem.quantity++
+
         }
         return cartItem
       })

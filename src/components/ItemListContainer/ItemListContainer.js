@@ -1,20 +1,22 @@
 import React, {useEffect, useState, setItems} from "react";
 import ItemList from '../ItemList/ItemList' 
-import { producto } from '../Productos/Productos'
 import {Container, Row, Col} from "react-bootstrap"
+import {getFirestore, getDoc,getDocs, collection, doc} from "firebase/firestore"
 
-export default function ItemListContainer ({categoryId}){
+export default function ItemListContainer ({title, categoryId}){
 const [items, setItems]= React.useState ([]);
+
   React.useEffect(()=> {
-      
-    if(categoryId){
-    setItems(producto.filter(item => item.category_id ===categoryId));
-  }
-  else{
-    setItems(producto);
-  }
- 
-}, [categoryId])
+      const db = getFirestore ()
+
+   
+
+      const productsRef = collection (db, "productos")
+      getDocs (productsRef).then(snapshots => {
+ setItems(snapshots.docs.map (doc => ({id: doc.id, ...doc.data()})))
+       
+      })
+  }, [])
 
  return (
    <>

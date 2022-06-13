@@ -19,11 +19,10 @@ const stock = 5
       <Card.Body className="grid__datos">
         <Card.Title>{item.name}</Card.Title>
         <Card.Text className="datos__descripcion">
-          Some quick example text to build on the card title and make up
-          the bulk of the card's content. 
+        DELIVERY DELAY BETWEEN 15 TO 30 BUSINESS DAYS. product in stock
         </Card.Text>
         <div className="datos__precio"> 
-        <h3>$ {item.description} </h3>
+        <h3> $ {item.description} </h3>
         </div>
         <div> 
         { isInCart(item.id) ? (

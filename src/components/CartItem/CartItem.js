@@ -18,7 +18,7 @@ const CartItem = ({ item }) => {
       </th>
       <th className='text-gray-700 md:text-lg sm:text-sm font-amastic'>
       ${description}
-      </th>
+      </th>     
       <th className='text-gray-700 md:text-lg sm:text-sm font-amastic'>
       {quantity}
       </th>
@@ -26,13 +26,13 @@ const CartItem = ({ item }) => {
       ${quantity * description}
       </th>
       <th>
-       <button className='md:text-lg sm:text-sm'  onClick={() => removeFromCart(id)}>  </button>
+       <button className='md:text-lg sm:text-sm'  onClick={() => removeFromCart(id)}> <FontAwesomeIcon icon="fa-solid fa-trash" /> </button>
     </th>
      <th>
-      <button className='md:text-lg sm:text-sm' onClick={() => deleteAll(id)}> </button>
+      <button className='md:text-lg sm:text-sm' onClick={() => deleteAll(id)}> <FontAwesomeIcon icon="fa-solid fa-trash" /></button>
        </th>
  </tr>
-     );
+     ); 
     };
     
     export default CartItem;  
