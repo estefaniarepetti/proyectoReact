@@ -1,23 +1,70 @@
 import React, {useEffect, useState, setItems} from "react";
 import ItemList from '../ItemList/ItemList' 
 import {Container, Row, Col} from "react-bootstrap"
-import {getFirestore, getDoc,getDocs, collection, doc} from "firebase/firestore"
+import {getFirestore, getDoc,getDocs, collection, doc,query, where} from "firebase/firestore"
 
-export default function ItemListContainer ({title, categoryId}){
-const [items, setItems]= React.useState ([]);
+export default function ItemListContainer ({title, categoryId}) {
+  const [items, setItems] = React.useState([]);
+  const [isLoading, setIsLoading] = React.useState(false);
+  const [search, setSearch] = React.useState("");
+  React.useEffect(() => {
+    const db = getFirestore()
+    if (categoryId) {
+      // 3. Traigo una colleccion pero con filtros
+      const q = query(
+        collection(db, "productos"),
+        where("category_id", "==", categoryId)
+      );
+      getDocs(q).then((snapshots) => {
+        if (snapshots.size === 0) {
+          console.log("No hay productos");
+        }
+        setItems(snapshots.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
+      });
+    } else {
+      // 2. Traigo una coleccion
+      const productsRef = collection(db, "productos");
+      getDocs(productsRef).then((snapshots) => {
+        if (snapshots.size === 0) {
+          console.log("No hay productos");
+        }
+        setItems(snapshots.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
+      });
+    }
+  },[categoryId])
 
-  React.useEffect(()=> {
-      const db = getFirestore ()
-
-   
-
-      const productsRef = collection (db, "productos")
-      getDocs (productsRef).then(snapshots => {
- setItems(snapshots.docs.map (doc => ({id: doc.id, ...doc.data()})))
-       
-      })
-  }, [])
-
+  const handleSearch = (event) => {
+    event.preventDefault()
+    if (search !== "") {
+      setItems(
+        items.filter((item) =>
+          item.title.toLowerCase().includes(search.toLowerCase())
+        )
+      );
+    } else {
+      const db = getFirestore();
+      const productsRef = collection(db, "productos");
+      getDocs(productsRef).then((snapshots) => {
+        if (snapshots.size === 0) {
+          console.log("No hay productos");
+        }
+        setItems(snapshots.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
+      });
+    }
+  };
+  const handleChange = (e) => {
+    setSearch(e.target.value);
+    if(e.target.value === ""){
+      const db = getFirestore();
+      const productsRef = collection(db, "productos");
+      getDocs(productsRef).then((snapshots) => {
+        if (snapshots.size === 0) {
+          console.log("No hay productos");
+        }
+        setItems(snapshots.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
+      });
+    }
+  }
  return (
    <>
    <section class="store">

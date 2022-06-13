@@ -7,7 +7,8 @@ export default function ItemDetail ({item}) {
 const { addToCart, isInCart } = React.useContext(CartContext)
 
 const [count, setCount] = React.useState(1) 
-const stock = 5
+
+
 
   return (
     <Card className="articulo__main">
