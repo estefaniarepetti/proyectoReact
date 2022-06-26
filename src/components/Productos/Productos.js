@@ -57,14 +57,14 @@ export const producto = [
     name: "Funko Star Wars ",
     stock: 9,
     description: 5999,
-    img: "../images/product/funcoserie3.png",
+    img: "  ",
     category_id:"Sale"
 },
 {
     id: 8,
     name: "Funko Loki ",
     stock: 9,
-    description: 1099,
+    description: 10999,
     img: "../images/product/funcoserie4.png",
     category_id: "Sale"
 },
@@ -73,8 +73,9 @@ export const producto = [
   name: "Funko Hugo Bart",    
   stock: 10,
   description: 8100,
-  img:"../images/product/funco5.png",
+  img:"../images/product/funco5.png ",
   category_id: "Movies"
 
 },
 ]
+  

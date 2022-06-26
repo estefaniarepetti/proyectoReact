@@ -4,7 +4,8 @@ import AddButton from "../AddButton/AddButton";
 import { CartContext } from "../../context/CartContext"
 
 export default function ItemDetail ({item}) {
-const { addToCart, isInCart } = React.useContext(CartContext)
+  
+const { addToCart, isInCart } = React.useContext(CartContext);
 
 const [count, setCount] = React.useState(1) 
 

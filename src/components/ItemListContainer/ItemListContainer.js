@@ -1,11 +1,11 @@
-import React, {useEffect, useState, setItems} from "react";
+import React, {useEffect, useState, setItems, Form} from "react";
 import ItemList from '../ItemList/ItemList' 
-import {Container, Row, Col} from "react-bootstrap"
-import {getFirestore, getDoc,getDocs, collection, doc,query, where} from "firebase/firestore"
+import {Container, Row, Col, Spinner} from "react-bootstrap"
+import {getFirestore, getDoc ,getDocs, collection, doc,query, where} from "firebase/firestore"
 
-export default function ItemListContainer ({title, categoryId}) {
+export default function ItemListContainer ({ categoryId}) {
   const [items, setItems] = React.useState([]);
-  const [isLoading, setIsLoading] = React.useState(false);
+  const [isLoading, setIsLoading] = React.useState(false);  
   const [search, setSearch] = React.useState("");
   React.useEffect(() => {
     const db = getFirestore()
@@ -67,16 +67,27 @@ export default function ItemListContainer ({title, categoryId}) {
   }
  return (
    <>
+
    <section class="store">
+ 
     <h2 class="store__texto"> Product's  </h2>
     <div class="container1">
       <div class="items">
         <div class="row2">
        
+        {isLoading ? (
+          <Spinner animation="grow" />
+        ) : (
+          items.length !== 0 ? (
+   <ItemList items={items}/>  
+   
+    ) : (
+            <h2>No se encontraron resultados</h2>
+          )
+        )}
 
-
-   <ItemList items={items}/>
    </div>
+   
  </div>
  </div>
  

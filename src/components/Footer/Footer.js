@@ -1,12 +1,13 @@
 import React from "react"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import BottomNav from "../BottomNav/BottomNav"
-import { faGithub} from '@fortawesome/free-solid-svg-icons' 
-import { faLinkedin } from '@fortawesome/free-solid-svg-icons' 
+
 
 export default class Footer extends React.Component{
     render(){
-        console.log(this.props)
+        console.log(this.props) 
+          const styles = {
+            text: "font-regular text-xs text-gray-700 tracking-wide leading-normal",
+            icon: "fill-current cursor-pointer",
+          }
 return(
 
     <footer>
@@ -19,24 +20,6 @@ return(
           </span>
         </p>
 
-        <div className="flex flex-row items-center justify-center pt-1 gap-x-2">
-          <a
-            href="https://github.com/EstefaniaRepetti"
-            target="_blank"
-            rel="noreferrer"
-          >
-         <FontAwesomeIcon icon="faGithub" />
-          
-          </a>
-          <a
-            href="https://www.linkedin.com/in/EstefaniaRepetti/"
-            target="_blank"
-            rel="noreferrer"
-          >
-          <FontAwesomeIcon icon="fa-brands faLinkedin" />
-            
-          </a>
-        </div>
       </div>
       
     </footer>
