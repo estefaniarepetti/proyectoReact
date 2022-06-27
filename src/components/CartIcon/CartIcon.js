@@ -1,21 +1,21 @@
-import React from "react"
+import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons' 
-import { Link } from "react-router-dom";
-import {CartContext}  from "../../context/CartContext"
+import { NavLink } from 'react-router-dom';
+import { useCartContext } from '../../context/CartContext'
 
-export default function CartIcon(){ 
-const { cart } = React.useContext(CartContext);
+const CardWidget = () => {
+  const { totalCount } = useCartContext ();
+ 
+  return (
 
-return(
-  <div className='CartIcon'>
-  <Link to="/Cart"> 
-     <FontAwesomeIcon icon={faCartShopping} />
-     <span className="badge">
-       {cart.length}
-     </span>
-     </Link> 
-  </div>
-
-);
+      <NavLink to='/cart' className='flex items-center'> 
+  <FontAwesomeIcon icon={faCartShopping} />
+                {totalCount() > 0 && (
+                  <span className="ml-2 text-base font-medium text-gray-900">{totalCount()}</span>
+              )}
+      </NavLink>
+      );
 }
+
+export default CardWidget

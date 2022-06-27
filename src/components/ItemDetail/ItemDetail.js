@@ -1,13 +1,12 @@
 import React from "react"
 import { Card } from "react-bootstrap"
 import AddButton from "../AddButton/AddButton";
-import { CartContext } from "../../context/CartContext"
+import { useCartContext  } from "../../context/CartContext"
 
 export default function ItemDetail ({item}) {
   
-const { addToCart, isInCart } = React.useContext(CartContext);
-
-const [count, setCount] = React.useState(1) 
+const { addToCart, unitsPerProduct } = useCartContext();
+const [count, setCount] = React.useState(0) 
 
 
 
@@ -27,7 +26,7 @@ const [count, setCount] = React.useState(1)
         <h3> $ {item.description} </h3>
         </div>
         <div> 
-        { isInCart(item.id) ? (
+        { unitsPerProduct (item.id) ? (
           <button className="botonPrincipal"> Ir al Carrito</button>
         ):(
           <AddButton onSubmit={() => addToCart(item,count)}

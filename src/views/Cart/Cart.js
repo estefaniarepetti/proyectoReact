@@ -1,23 +1,21 @@
-import React from "react";
-import{ Card } from "react-bootstrap"
-import { CartContext } from "../../context/CartContext";
-import Footer from "../../components/Footer/Footer";
+import { useCartContext } from '../../context/CartContext';
+import React from 'react'
 import Navbar from "../../components/Navbar/Navbar"
-import CarritoVacio from "../../components/CarritoVacio/CarritoVacio"
-import { Link } from "react-router-dom";
+import CartItem from "../../components/CartItem/CartItem"
+import CarritoVacio from './../../components/CarritoVacio/CarritoVacio';
+import { Link } from 'react-router-dom';
 
 
-export default function CartItem ({item}) {
 
-  const { cart, totalCount, totalPrice, deleteAll} = React.useContext(CartContext)
-  return (
-    <> 
-    <Navbar />
-   
-    <h2 className='self-center p-6 leading-tight tracking-wider text-center text-gray-800 uppercase md:text-2xl sm:text-xl font-amastic'>Mi Carrito</h2>
-     
+const Cart = () => {
+    const { cartList, emptyCart, totalPrice, totalCount} = useCartContext();
+  
+return (
+<>
+<Navbar />
+      <h2 className='self-center p-6 leading-tight tracking-wider text-center text-gray-800 uppercase md:text-2xl sm:text-xl font-amastic'>Mi Carrito</h2>
 
-    {totalCount () === 0 ? (
+      {totalCount () === 0 ? (
         <CarritoVacio></CarritoVacio>
       ): (
 
@@ -33,12 +31,12 @@ export default function CartItem ({item}) {
             <th className='items-center tracking-wide text-gray-800 md:text-xl font-amastic sm:text-xs'>Todos los Productos</th>
           </tr>
         </thead>
-      {cart.map((item) => (
+      {cartList.map((item) => (
         <CartItem key={item.id} item={item} />
       ))}
        </table>
         <div className="flex flex-col justify-between w-4/5 mx-auto mt-6 mb-3 md:flex-row">
-          <button className='flex flex-col text-xl tracking-wide text-center text-gray-600 font-boogaloo focus:outline-none' onClick={() => deleteAll()}>Click aquí para vaciar todo tu Carrito 
+          <button className='flex flex-col text-xl tracking-wide text-center text-gray-600 font-boogaloo focus:outline-none' onClick={() => emptyCart()}> Click aquí para vaciar todo tu Carrito 
           </button>
           
           <div className="flex flex-col self-start w-full md:w-2/5">
@@ -57,10 +55,12 @@ export default function CartItem ({item}) {
           </div>
         </div>   
     </div>
+  
  )} 
+ 
 
-    
-
-   </>
-  )
-}
+ </>
+ );
+  };
+ 
+  export default Cart;

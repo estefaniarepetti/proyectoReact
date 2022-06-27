@@ -1,19 +1,17 @@
 import React from 'react'
 import {Link, useNavigate} from "react-router-dom"
-import { producto } from '../Productos/Productos'
-import AddButton from '../AddButton/AddButton'  
-
+import { Card } from "react-bootstrap"
 
 export default function Item ({item}){
 const navigate = useNavigate()
 
   return (
     <> 
-  
+    <Card style={{ width: "18rem" }} onClick={() => navigate(`/product/${item.id}`)}>
           <div class="col-12 col-md-6">
             <div class="item shadow mb-4">
              <img src={item.img} className="item-image" alt={item.name}/>
-             <div> 
+             <div>  
              <p className="item-title">{item.name}</p>
 </div>
               <div class="item-details">
@@ -28,7 +26,7 @@ const navigate = useNavigate()
               </div>
             </div>
           </div>
-
+</Card>
 
 </>
 
