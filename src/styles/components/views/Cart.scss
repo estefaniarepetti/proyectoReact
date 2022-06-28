@@ -1,0 +1,64 @@
+.button2{
+  display: flex;
+  flex-direction: flex-col;
+   text-align:center;
+   background-color: #3498DB !important;
+   color: #fff;
+  
+}
+
+.text-white{
+  background-color: #3498DB !important;;
+}
+
+img{
+  width: 80% !important;
+}
+
+
+.principal{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.descripcion{
+display:flex;
+flex-direction: column;
+align-self: flex-start;
+margin-left: 42%;
+margin-top: 3rem;
+}
+
+.descipcionDos{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between
+}
+
+.descripcionTres{
+  display: flex;
+  flex-direction: row ;
+  justify-content: space-between
+
+}
+
+.envio{
+  display: flex;
+  flex-direction: row ;
+  justify-content: space-between
+
+}
+
+.envioP {
+  font-family:  Light;
+}
+
+.final{
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  background-color: #3498DB !important;
+  font-family: Light;
+
+}

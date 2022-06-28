@@ -1,10 +1,13 @@
+
 import { useCartContext } from '../../context/CartContext';
 import React from 'react'
 import Navbar from "../../components/Navbar/Navbar"
 import CartItem from "../../components/CartItem/CartItem"
 import CarritoVacio from './../../components/CarritoVacio/CarritoVacio';
 import { Link } from 'react-router-dom';
-
+import Footer from "../../components/Footer/Footer"
+  import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+  import {faTrash} from '@fortawesome/free-solid-svg-icons'
 
 
 const Cart = () => {
@@ -31,32 +34,34 @@ return (
             <th className='items-center tracking-wide text-gray-800 md:text-xl font-amastic sm:text-xs'>Todos los Productos</th>
           </tr>
         </thead>
-      {cartList.map((item) => (
+      {cartList.map((item) => ( 
         <CartItem key={item.id} item={item} />
       ))}
        </table>
-        <div className="flex flex-col justify-between w-4/5 mx-auto mt-6 mb-3 md:flex-row">
-          <button className='flex flex-col text-xl tracking-wide text-center text-gray-600 font-boogaloo focus:outline-none' onClick={() => emptyCart()}> Click aquí para vaciar todo tu Carrito 
-          </button>
+        <div className="principal">
+        <FontAwesomeIcon icon={faTrash}  />
+          <button className=' button2' onClick={() => emptyCart()}>  Click aquí para vaciar todo tu Carrito
+          </button> 
           
-          <div className="flex flex-col self-start w-full md:w-2/5">
-            <div className="flex flex-row justify-between text-xl tracking-wide font-amastic">
+          <div className="descripcion">
+            <div className="descipcionDos">
                 <p>Cantidad de items:</p>
-                <p>{totalCount()}</p>
+                <p className='parrafoItem'>{totalCount()}</p>
             </div>
-            <div className="flex flex-row justify-between text-xl font-semibold tracking-wide font-amastic " >
+            <div className=" descripcionTres" >
                 <p>Total:</p>
                 <p>${totalPrice()}</p>
             </div>
-            <div className="flex flex-row justify-between pb-2 tracking-wide font-shadows">
-              <p>¡El envío es gratis!</p>
+            <div className=" envio ">
+              <p className="envioP">¡El envío es gratis!</p>
             </div>
-            <Link to='/checkout' className='px-4 py-2 text-lg tracking-widest text-center text-white duration-200 bg-red-600 rounded-lg hover:bg-red-400 transition-color focus:outline-none font-shadows'>Finalizar Compra </Link>
+            <Link to='/checkout' className='final'>Finalizar Compra </Link>
           </div>
         </div>   
     </div>
   
  )} 
+ 
  
 
  </>

@@ -11,7 +11,7 @@ const CartItem = ({ item }) => {
   return (
     <tr className='border-b border-gray-200'>
       <th className='flex flex-col items-center '> 
-      <img className='h-32 w-36'src={img} alt="simon cat imagen" />
+      <img className='h-32 w-36'src={img} alt="Funko imagen" />
       <div className='flex flex-col '>
         <p className='tracking-wide text-gray-700 md:text-lg sm:text-sm font-amastic'>{name}</p>
       </div>

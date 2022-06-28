@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { useCartContext } from "../context/CartContext";
+import { useCartContext } from "../../context/CartContext";
 import { collection, getFirestore, addDoc} from "firebase/firestore"
-import {HiOutlineChevronDoubleLeft} from "react-icons/hi";
+import Navbar from "../../components/Navbar/Navbar"
+import Footer from "../../components/Footer/Footer"
 
 const Checkout = () => {
  
@@ -48,6 +49,7 @@ const Checkout = () => {
 
   return (
     <>
+    <Navbar />
       <div className="flex items-center justify-center px-16 pt-10 xl:max-w-7xl xl:mx-auto">
         <div className="flex flex-col items-center justify-center w-full">
           <h1 className="mb-6 text-2xl tracking-wide text-gray-800 uppercase font-boogaloo">
@@ -69,11 +71,7 @@ const Checkout = () => {
                   <p>${totalPrice()}</p>
                 </div>
               </div>
-              <Link
-                to="/cart" className="flex flex-row items-center mt-3 tracking-wider font-boogaloo">
-                <HiOutlineChevronDoubleLeft > </HiOutlineChevronDoubleLeft>
-                Volver al Carrito.
-              </Link>
+             
             </div>
 
             <div className="flex flex-col items-start justify-start w-full mt-6 mb-3 lg:mt-0">
@@ -165,6 +163,8 @@ const Checkout = () => {
           </div>
         </div>
       </div>
+
+      <Footer />  
     </>
   )
 }

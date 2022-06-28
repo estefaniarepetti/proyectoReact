@@ -5,6 +5,7 @@ import Products from "./views/Products/Products"
 import Category from "./views/Category/Category"
 import Product from "./views/Product/Product"
 import Cart from "./views/Cart/Cart"
+import Checkout from "./views/Checkout/Checkout";
 
 
 function App (){
@@ -20,6 +21,7 @@ function App (){
   <Route extac path="/product/:productoId" element={<Product />} />
   <Route exact path="/category/:categoryId" element={<Category /> } />
   <Route exact path="/Cart" element={<Cart />} />
+  <Route exact path='/Checkout' element={<Checkout/>}/>  
 
 </Routes> 
  
