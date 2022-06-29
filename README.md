@@ -1,4 +1,8 @@
 # Funko Tienda React
+ 
+## Web
+
+![alt text](/images/ezgif.com-gif-maker.gif")
 
 
 ## Datos
