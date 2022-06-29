@@ -2,7 +2,7 @@
  
 ## Web
 
-![Gif](../proyectoReact/public/images/ezgif.com-gif-maker.gif)
+![Gif](https://imgflip.com/gif/6laooo)
 
 
 ## Datos
