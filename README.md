@@ -2,7 +2,7 @@
  
 ## Web
 
-![Gif](../proyecto/public/images/ezgif.com-gif-maker.gif).
+![Gif](https://github.com/estefaniarepetti/proyectoReact/tree/master/public/images/ezgif.com-gif-maker.gif).
 
 
 ## Datos
