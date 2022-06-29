@@ -5,9 +5,8 @@ import Navbar from "../../components/Navbar/Navbar"
 import CartItem from "../../components/CartItem/CartItem"
 import CarritoVacio from './../../components/CarritoVacio/CarritoVacio';
 import { Link } from 'react-router-dom';
-import Footer from "../../components/Footer/Footer"
-  import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-  import {faTrash} from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faTrash} from '@fortawesome/free-solid-svg-icons'
 
 
 const Cart = () => {
@@ -39,21 +38,23 @@ return (
       ))}
        </table>
         <div className="principal">
-        <FontAwesomeIcon icon={faTrash}  />
+        <div className="principalIcon" > 
+        <FontAwesomeIcon icon={faTrash} />
+        </div>
           <button className=' button2' onClick={() => emptyCart()}>  Click aquí para vaciar todo tu Carrito
           </button> 
           
           <div className="descripcion">
             <div className="descipcionDos">
-                <p>Cantidad de items:</p>
-                <p className='parrafoItem'>{totalCount()}</p>
+                <p className='parrafoItem' > <b> Cantidad de items: </b></p>
+                <p className='parrafoItem'> <b> {totalCount()} </b></p>
             </div>
             <div className=" descripcionTres" >
-                <p>Total:</p>
-                <p>${totalPrice()}</p>
+                <p> <b> Total: </b></p>
+                <p><b>${totalPrice()} </b></p>
             </div>
             <div className=" envio ">
-              <p className="envioP">¡El envío es gratis!</p>
+              <p className="envioP"> <b> ¡El envío es gratis!  </b></p>
             </div>
             <Link to='/checkout' className='final'>Finalizar Compra </Link>
           </div>

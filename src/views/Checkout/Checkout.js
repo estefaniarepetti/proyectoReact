@@ -52,12 +52,12 @@ const Checkout = () => {
     <Navbar />
       <div className="flex items-center justify-center px-16 pt-10 xl:max-w-7xl xl:mx-auto">
         <div className="flex flex-col items-center justify-center w-full">
-          <h1 className="mb-6 text-2xl tracking-wide text-gray-800 uppercase font-boogaloo">
+          <h1 className=" carrito mb-6 text-2xl tracking-wide text-gray-800 uppercase font-boogaloo">
             Resúmen de tu compra
           </h1>
           <div className="flex flex-col items-start justify-start w-full lg:flex-row">
             <div className="flex flex-col self-start w-full mr-6 md:w-1/2">
-              <h2 className="text-xl tracking-wide text-gray-800 font-boogaloo">Estos son los productos en tu carrito</h2>
+              <h2 className="carritoItems text-xl tracking-wide text-gray-800 font-boogaloo">Estos son los productos en tu carrito : </h2>
               <div className='flex flex-col p-4 mt-6 text-xl bg-gray-200 border'>
                 <div className="flex flex-row justify-between tracking-wide font-amastic">
                   <p>Cantidad de items:</p>

@@ -20,7 +20,7 @@ const [count, setCount] = React.useState(0)
       <Card.Body className="grid__datos">
         <Card.Title>{item.name}</Card.Title>
         <Card.Text className="datos__descripcion">
-        DELIVERY DELAY BETWEEN 15 TO 30 BUSINESS DAYS. product in stock
+        DELIVERY DELAY BETWEEN 15 TO 30 BUSINESS DAYS. Product in stock
         </Card.Text>
         <div className="datos__precio"> 
         <h3> $ {item.description} </h3>

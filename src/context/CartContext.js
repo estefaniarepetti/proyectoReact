@@ -11,7 +11,7 @@ const CartContextProvider = ({ children }) => {
     return cartList.some((item) => item.id === id);
   };
 
-  const addToCart = (item, quantity) => {
+  const addToCart = (item, quantity , description) => {
     if (isInCart(item.id)) {
       return setCartList(
         cartList.map((product) =>
@@ -51,7 +51,7 @@ const CartContextProvider = ({ children }) => {
 
   const totalPrice = () => {
     return cartList.reduce(
-      (total, item) => total + item.quantity * item.price,
+      (total, item) => total + item.quantity * item.description,
       0
     );
   };
