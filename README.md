@@ -2,7 +2,7 @@
  
 ## Web
 
-![Gif]()
+![Gif](../proyectoReact/public/images/ezgif.com-gif-maker.gif)
 
 
 ## Datos
