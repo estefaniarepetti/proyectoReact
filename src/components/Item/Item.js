@@ -20,7 +20,7 @@ const navigate = useNavigate()
            
 
      <Link to ={`/product/${item.id}`} className="item-button btn btn-primary addToCart">  
-    Ver más detalle 
+    Comprar 
      </Link> 
 
               </div>
