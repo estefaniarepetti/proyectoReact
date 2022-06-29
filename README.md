@@ -2,7 +2,7 @@
  
 ## Web
 
-![Gif](https://imgflip.com/gif/6laooo)
+![Gif]()
 
 
 ## Datos
