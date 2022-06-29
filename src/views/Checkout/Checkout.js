@@ -77,42 +77,42 @@ const Checkout = () => {
             <div className="flex flex-col items-start justify-start w-full mt-6 mb-3 lg:mt-0">
 
               <form className="w-full space-y-6">
-                <h2 className="text-base tracking-wide font-boogaloo">Completa los siguientes datos así te hacemos llegar la Factura de tu Compra</h2>
+                <h2 className=" itemComplet text-base tracking-wide font-boogaloo">Completa los siguientes datos así te hacemos llegar la Factura de tu Compra</h2>
                 <input
-                  className="w-full px-2 py-4 placeholder-gray-600 border border-gray-200 focus:outline-none focus:ring-white font-shadows focus:border-red-200 "
+                  className="label w-full px-2  placeholder-gray-700 border border-gray-200 focus:outline-none focus:ring-white font-shadows focus:border-red-200 "
                   id="name"
                   type="text"
                   name="name"
                   required
                   onChange={handleSubmitChange}
-                  placeholder="Aquí tu nombre"
+                  placeholder="Nombre"
                 />
                 <input
-                  className="w-full px-2 py-4 placeholder-gray-600 border border-gray-200 focus:outline-none focus:ring-white font-shadows focus:border-red-200 "
+                  className=" label w-full px-2  placeholder-gray-600 border border-gray-200 focus:outline-none focus:ring-white font-shadows focus:border-red-200 "
                   id="surname"
                   type="text"
                   name="lastname"
                   required
                   onChange={handleSubmitChange}
-                  placeholder="Aquí tu pellido"
+                  placeholder="Apellido"
                 />
                 <input
-                  className="w-full px-2 py-4 placeholder-gray-600 border border-gray-200 focus:outline-none focus:ring-white font-shadows focus:border-red-200 "
+                  className="label w-full px-2  placeholder-gray-600 border border-gray-200 focus:outline-none focus:ring-white font-shadows focus:border-red-200 "
                   id="phone"
                   type="phone"
                   name="phone"
                   required
                   onChange={handleSubmitChange}
-                  placeholder="Aquí tu número de Teléfono"
+                  placeholder=" Teléfono"
                 />
                 <input
-                  className="w-full px-2 py-4 placeholder-gray-600 border border-gray-200 focus:outline-none focus:ring-white font-shadows focus:border-red-200 "
+                  className="label w-full px-2 placeholder-gray-600 border border-gray-200 focus:outline-none focus:ring-white font-shadows focus:border-red-200 "
                   id="email"
                   type="email"
                   name="email"
                   required
                   onChange={handleSubmitChange}
-                  placeholder="Dejanos tu E-mail"
+                  placeholder="E-mail"
                 />
               </form>
               
@@ -129,7 +129,7 @@ const Checkout = () => {
               />
             ) : ( 
               <input
-                className='w-full px-4 py-2 text-lg tracking-widest text-center text-white duration-200 bg-red-600 rounded-lg hover:bg-red-400 transition-color focus:outline-none font-shadows'
+                className='complet w-full px-4 py-2 text-lg tracking-widest text-center text-white duration-200 bg-red-600 rounded-lg hover:bg-red-400 transition-color focus:outline-none font-shadows'
                 type="submit"
                 value="Completa tus datos"
                 disabled
